@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">My Notes App</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="my_notes_label">My Notes</string>
+    <string name="new_note_label">New Note</string>
+    <string name="create_note_label">Create Note</string>
+    <string name="note_title_label">Title</string>
+    <string name="error_title_label">Title required</string>
+    <string name="error_description_label">Description required</string>
+    <string name="note_description_label">Description</string>
+    <string name="title_1">Title 1</string>
+    <string name="description_1">Description 1</string>
+    <string name="title_2">Title 2</string>
+    <string name="description_2">Description 2</string>
+    <string name="title_activity_create_note">Create Note</string>
+    <string name="cancel_text">Cancel</string>
+    <string name="validation_text">Ok</string>
+</resources>
