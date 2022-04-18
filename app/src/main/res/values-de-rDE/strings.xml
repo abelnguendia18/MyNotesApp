@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">My Notes App</string>
+    <string name="action_settings">Einstellungen</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="my_notes_label">Meine Notizen</string>
+    <string name="new_note_label">Neue Notiz</string>
+    <string name="create_note_label">Notiz erstellen</string>
+    <string name="note_title_label">Title</string>
+    <string name="error_title_label">Titel notwendig</string>
+    <string name="error_description_label">Beschreibung notwendig</string>
+    <string name="note_description_label">Beschreibung</string>
+    <string name="title_1">Titel 1</string>
+    <string name="description_1">Beschreibung 1</string>
+    <string name="title_2">Titel 2</string>
+    <string name="description_2">Beschreibung 2</string>
+    <string name="title_activity_create_note">Notiz Erstellen</string>
+    <string name="cancel_text">Abbrechen</string>
+    <string name="validation_text">Ok</string>
+</resources>
