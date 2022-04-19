@@ -1,6 +1,6 @@
 # remove the leading '#' to uncomment lines
 
-test_instrumentation_runner 'androidx.test.runner.AndroidJUnitRunner'
+# test_instrumentation_runner 'androidx.test.runner.AndroidJUnitRunner'
 
 app_package_name('com.tapondjou.mynotesapp')
 #use_tests_in_packages(['com.tapondjou.mynotesapp.TF1'])

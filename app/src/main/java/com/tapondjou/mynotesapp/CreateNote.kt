@@ -32,18 +32,17 @@ class CreateNote : AppCompatActivity() {
             val desc = binding.edtNoteDescription.text.toString().trim()
             val replyIntent = Intent()
             if(title.isEmpty()){
-                //binding.edtNoteTitle.error = getString(R.string.error_title_label)
+                binding.edtNoteTitle.error = getString(R.string.error_title_label)
                 binding.edtNoteTitle.requestFocus()
                 return@setOnClickListener
             }
             if(desc.isEmpty()){
-                //binding.edtNoteDescription.error = getString(R.string.error_description_label)
+                binding.edtNoteDescription.error = getString(R.string.error_description_label)
                 binding.edtNoteDescription.requestFocus()
                 return@setOnClickListener
             }
                 val note = Note(title, desc)
-                val defect_note = Note( desc,title)
-                replyIntent.putExtra("sendNote", defect_note)
+                replyIntent.putExtra("sendNote", note)
                 setResult(Activity.RESULT_OK, replyIntent)
                 finish()
 
