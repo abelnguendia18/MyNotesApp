@@ -42,8 +42,7 @@ class CreateNote : AppCompatActivity() {
                 return@setOnClickListener
             }
                 val note = Note(title, desc)
-                val defect_note = Note( desc,title)
-                replyIntent.putExtra("sendNote", defect_note)
+                replyIntent.putExtra("sendNote", note)
                 setResult(Activity.RESULT_OK, replyIntent)
                 finish()
 
