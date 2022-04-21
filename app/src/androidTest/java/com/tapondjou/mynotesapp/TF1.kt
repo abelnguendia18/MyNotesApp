@@ -3,7 +3,8 @@ package com.tapondjou.mynotesapp
 
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions.*
-import androidx.test.espresso.matcher.ViewMatchers.withId
+import androidx.test.espresso.assertion.ViewAssertions.matches
+import androidx.test.espresso.matcher.ViewMatchers.*
 import androidx.test.ext.junit.rules.ActivityScenarioRule
 import androidx.test.filters.LargeTest
 import androidx.test.runner.AndroidJUnit4
@@ -18,7 +19,7 @@ import tools.fastlane.screengrab.locale.LocaleTestRule
 class TF1 {
 
     companion object{
-        var cpt: Int = (10..100).random()
+        var cpt: Int = (10..1000).random()
     }
 
     @get:Rule
@@ -36,7 +37,6 @@ class TF1 {
 
         //Click on the add note button
         onView(withId(R.id.fab)).perform(click())
-        Screengrab.screenshot("Begin")
 
         //Add note title and description
         onView(withId(R.id.edt_note_title)).perform(typeText(title))
@@ -44,11 +44,10 @@ class TF1 {
 
         //Save the note
         onView(withId(R.id.button_create_note)).perform(click())
-        Screengrab.screenshot("After")
 
         //Verify that note is displayed on screen
-        //onView(withText(title)).check(matches(isDisplayed()))
-        //onView(withText(desc)).check(matches(isDisplayed()))
+        onView(withText(title)).check(matches(isDisplayed()))
+        onView(withText(desc)).check(matches(isDisplayed()))
 
     }
     fun setTitleAndDesc(){
