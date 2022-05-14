@@ -40,10 +40,7 @@
                 // Add sample words.
                 var note = Note("Title 1", "Description 1")
                 noteDao.addNode(note)
-                note= Note("Title 2","Description 2")
-                noteDao.addNode(note)
 
-                // TODO: Add your own words!
             }
         }
 

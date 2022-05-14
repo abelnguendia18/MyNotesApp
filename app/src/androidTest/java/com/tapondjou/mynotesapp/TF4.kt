@@ -32,7 +32,7 @@ class TF4 {
     var mActivityTestRule = ActivityScenarioRule(CreateNote::class.java)
 
     @Test
-    fun createNoteScreenInEnglishTest(){
+    fun createNoteScreenTest_enEN(){
         setEnglishAsLanguage()
         onView(withId(R.id.edt_note_title)).check(matches(withHint(R.string.note_title_label)))
         onView(withId(R.id.edt_note_description)).check(matches(withHint(R.string.note_description_label)))
@@ -40,7 +40,7 @@ class TF4 {
     }
 
     @Test
-    fun createNoteScreenInGermanTest(){
+    fun createNoteScreenTest_deDE(){
         setGermanAsLanguage()
         onView(withId(R.id.edt_note_title)).check(matches(withHint(R.string.note_title_label)))
         onView(withId(R.id.edt_note_description)).check(matches(withHint(R.string.note_description_label)))

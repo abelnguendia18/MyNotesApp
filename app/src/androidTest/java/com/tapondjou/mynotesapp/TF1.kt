@@ -48,7 +48,6 @@ class TF1 {
 
         //Click on the add note button
         onView(withId(R.id.fab)).perform(click())
-        Screengrab.screenshot("Begin")
 
         //Add note title and description
         onView(withId(R.id.edt_note_title)).perform(typeText(title))
@@ -56,7 +55,6 @@ class TF1 {
 
         //Save the note
         onView(withId(R.id.button_create_note)).perform(click())
-        Screengrab.screenshot("After")
 
         //Verify that note is displayed on screen
         onView(withText(title)).check(matches(isDisplayed()))
