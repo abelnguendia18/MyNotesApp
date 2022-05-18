@@ -23,6 +23,8 @@ class NoteListAdapter(var itemClicklistener: onItemClicklistener): ListAdapter<N
     class NoteViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val noteTitleItemView: TextView = itemView.findViewById(R.id.textView_note_title)
         private val noteDescriptionItemView: TextView = itemView.findViewById(R.id.textView_note_description)
+        private val notePrio: TextView = itemView.findViewById(R.id.textView_priority)
+        private val isChecked: TextView = itemView.findViewById(R.id.textView_is_checked)
 
         fun bind(note: Note?, clicklistener: onItemClicklistener) {
             if (note != null) {
@@ -30,6 +32,13 @@ class NoteListAdapter(var itemClicklistener: onItemClicklistener): ListAdapter<N
             }
             if (note != null) {
                 noteDescriptionItemView.text = note.description
+            }
+            if (note != null) {
+                notePrio.text = note.notePrio.toString()
+            }
+            if (note != null) {
+
+                    isChecked.text = note.isCchecked
             }
             itemView.setOnClickListener{
                 if (note != null) {

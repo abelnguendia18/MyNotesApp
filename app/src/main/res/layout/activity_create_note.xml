@@ -23,15 +23,47 @@
         android:layout_height="wrap_content"
         android:hint="@string/note_description_label"
         android:inputType="textMultiLine"
-        app:layout_constraintBottom_toTopOf="@id/button_create_note"
+        app:layout_constraintBottom_toTopOf="@id/tv_setPriority"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tv_setPriority"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="50dp"
+        android:text="@string/label_define_priority"
+        app:layout_constraintBottom_toTopOf="@id/checkBox_color"
+        app:layout_constraintLeft_toLeftOf="@id/spinner_for_priority"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinner_for_priority"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="47dp"
+        app:layout_constraintStart_toEndOf="@id/tv_setPriority"
+        app:layout_constraintBottom_toTopOf="@id/checkBox_color"
+        />
+
+    <CheckBox
+        android:id="@+id/checkBox_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="@string/label_checkbox"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/button_create_note"/>
 
     <Button
         android:id="@+id/button_create_note"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
         android:text="@string/create_note_label"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

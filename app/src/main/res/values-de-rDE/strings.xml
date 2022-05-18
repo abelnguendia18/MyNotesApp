@@ -17,4 +17,16 @@
     <string name="title_activity_create_note">Notiz Erstellen</string>
     <string name="cancel_text">Abbrechen</string>
     <string name="validation_text">Ok</string>
+    <string name="label_checkbox">Haken setzen</string>
+    <string name="label_checkbox_checked">Haken gesetzt</string>
+    <string name="label_checkbox_not_checked">Haken nicht gesetzt</string>
+    <string name="label_define_priority">Setze eine Priorität</string>
+    <string-array name="priority_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
 </resources>

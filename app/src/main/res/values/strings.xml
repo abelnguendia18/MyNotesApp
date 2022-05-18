@@ -16,4 +16,17 @@
     <string name="title_activity_create_note">Create Note</string>
     <string name="cancel_text">Cancel</string>
     <string name="validation_text">Ok</string>
+    <string name="label_define_priority">Define a priority</string>
+    <string name="label_checkbox">Check</string>
+    <string name="label_checkbox_checked">Checked</string>
+    <string name="label_checkbox_not_checked">Not checked</string>
+    <string-array name="priority_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
 </resources>
