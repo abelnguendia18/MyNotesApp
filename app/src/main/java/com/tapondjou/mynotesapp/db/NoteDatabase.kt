@@ -40,8 +40,17 @@
                 // Add sample words.
                 var note = Note("Title 1", "Description 1", "1", "Not checked")
                 noteDao.addNode(note)
-                //note= Note("Title 2","Description 2")
-                //noteDao.addNode(note)
+                note= Note("Title 2","Description 2","2","Checked")
+                noteDao.addNode(note)
+                note= Note("Title 3","Description 3","3","Checked")
+                noteDao.addNode(note)
+                note= Note("Title 4","Description 4","4","Not checked")
+                noteDao.addNode(note)
+                note= Note("Title 5","Description 5","5","Not checked")
+                noteDao.addNode(note)
+                note= Note("Title 6","Description 6","6","Not checked")
+                noteDao.addNode(note)
+
 
                 // TODO: Add your own words!
             }
