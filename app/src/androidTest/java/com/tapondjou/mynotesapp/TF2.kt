@@ -33,17 +33,24 @@ class TF2 {
     @Test
     //TF2
     fun itemsDisplayOnScreenTest(){
+
         val edt_title = onView(withId(R.id.edt_note_title))
         val edt_description = onView(withId(R.id.edt_note_description))
         val btn_create_note = onView(withId(R.id.button_create_note))
+
         onView(withText(R.string.new_note_label))
             .check(matches(isDisplayed()))
+
         edt_title.check(matches(isDisplayed()))
             .check(matches(withHint(R.string.note_title_label)))
-            .check(PositionAssertions.isAbove(withId(R.id.edt_note_description)))
+
         edt_description.check(matches(isDisplayed()))
             .check(matches(withHint(R.string.note_description_label)))
-            .check(PositionAssertions.isAbove(withId(R.id.button_create_note)))
+
+        onView(withId(R.id.tv_setPriority)).check(matches(isDisplayed()))
+        onView(withId(R.id.spinner_for_priority)).check(matches(isDisplayed()))
+        onView(withId(R.id.checkBox_color)).check(matches(isDisplayed()))
+
         btn_create_note.check(matches(isDisplayed()))
             .check(matches(withText(R.string.create_note_label)))
     }

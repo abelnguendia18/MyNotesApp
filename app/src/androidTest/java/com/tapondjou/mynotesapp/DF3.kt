@@ -38,6 +38,7 @@ class DF3 {
     fun loadDecorView() {
         mActivityTestRule.scenario.onActivity { activity ->
             decorView = activity.window.decorView
+            activity.applicationContext
         }
     }
 

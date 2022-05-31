@@ -38,8 +38,11 @@
                 //noteDao.deleteAll()
 
                 // Add sample words.
-                var note = Note("Title 1", "Description 1", "1", "Not checked")
-                noteDao.addNode(note)
+                for (i in 1..6){
+                    var note = Note("Title "+i, "Description "+i, "1", "Not checked")
+                    noteDao.addNode(note)
+                }
+
                 //note= Note("Title 2","Description 2")
                 //noteDao.addNode(note)
 

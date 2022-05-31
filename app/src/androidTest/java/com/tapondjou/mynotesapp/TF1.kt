@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.test.core.app.ActivityScenario
+import androidx.test.espresso.Espresso.onData
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions.*
 import androidx.test.espresso.assertion.ViewAssertions.matches
@@ -17,7 +18,7 @@ import androidx.test.rule.ActivityTestRule
 import androidx.test.runner.AndroidJUnit4
 import org.hamcrest.Description
 import org.hamcrest.Matcher
-import org.hamcrest.Matchers.allOf
+import org.hamcrest.Matchers.*
 import org.hamcrest.TypeSafeMatcher
 import org.junit.BeforeClass
 import org.junit.ClassRule
@@ -42,24 +43,31 @@ class TF1 {
     @Test
     fun createNoteTest(){
 
-        val title = "Title 180"
-        val desc = "Description 180"
+        val title = "My Title"
+        val desc = "My Description"
 
         //Click on the add note button
         onView(withId(R.id.fab)).perform(click())
-        Screengrab.screenshot("Begin")
 
-        //Add note title and description
+        //Add note's information
         onView(withId(R.id.edt_note_title)).perform(typeText(title))
         onView(withId(R.id.edt_note_description)).perform(typeText(desc), closeSoftKeyboard())
+        onView(withId(R.id.spinner_for_priority)).perform(click());
+        //Set notes's priority to 4
+        onData(allOf(`is`(instanceOf(String::class.java)),
+            `is`("4"))).perform(click())
+        onView(withId(R.id.checkBox_color)).perform(click());
+
 
         //Save the note
         onView(withId(R.id.button_create_note)).perform(click())
-        Screengrab.screenshot("After")
 
         //Verify that note is displayed on screen
         onView(withText(title)).check(matches(isDisplayed()))
         onView(withText(desc)).check(matches(isDisplayed()))
+        onView(withText("4")).check(matches(isDisplayed()))
+        onView(withText("Checked")).check(matches(isDisplayed()))
+
 
     }
 

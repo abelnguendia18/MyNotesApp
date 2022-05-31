@@ -59,13 +59,13 @@ class CreateNote : AppCompatActivity(), AdapterView.OnItemSelectedListener{
             val replyIntent = Intent()
             if(title.isEmpty()){
                 //binding.edtNoteTitle.error = getString(R.string.error_title_label)
-                Toast.makeText(this, getString(R.string.error_title_label), Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, getString(R.string.error_title_label), Toast.LENGTH_LONG).show()
                 binding.edtNoteTitle.requestFocus()
                 return@setOnClickListener
             }
             if(desc.isEmpty()){
                 //binding.edtNoteDescription.error = getString(R.string.error_description_label)
-                Toast.makeText(this, getString(R.string.error_description_label), Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, getString(R.string.error_description_label), Toast.LENGTH_LONG).show()
 
                 binding.edtNoteDescription.requestFocus()
                 return@setOnClickListener
