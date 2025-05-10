@@ -3,6 +3,8 @@ package com.tapondjou.mynotesapp
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
+import android.view.View.GONE
+import android.view.View.VISIBLE
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.ui.AppBarConfiguration
@@ -25,28 +27,26 @@ class CreateNote : AppCompatActivity() {
         setContentView(binding.root)
         supportActionBar?.setTitle(R.string.new_note_label)
 
-        binding.buttonCreateNote.setOnClickListener {view ->
-            //findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
-            //Snackbar.make(view,"", Snackbar.LENGTH_LONG).show()
+        binding.buttonCreateNote.setOnClickListener { view ->
+            binding.tvTitleError.visibility = GONE
+            binding.tvDescriptionError.visibility = GONE
             val title = binding.edtNoteTitle.text.toString().trim()
             val desc = binding.edtNoteDescription.text.toString().trim()
             val replyIntent = Intent()
             if(title.isEmpty()){
-                //binding.edtNoteTitle.error = getString(R.string.error_title_label)
+                binding.tvTitleError.visibility = VISIBLE
                 binding.edtNoteTitle.requestFocus()
                 return@setOnClickListener
             }
             if(desc.isEmpty()){
-                //binding.edtNoteDescription.error = getString(R.string.error_description_label)
+                binding.tvDescriptionError.visibility = VISIBLE
                 binding.edtNoteDescription.requestFocus()
                 return@setOnClickListener
             }
-                val note = Note(title, desc)
                 val defect_note = Note( desc,title)
                 replyIntent.putExtra("sendNote", defect_note)
                 setResult(Activity.RESULT_OK, replyIntent)
                 finish()
-
         }
 
     }
