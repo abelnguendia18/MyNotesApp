@@ -2,17 +2,12 @@ package com.tapondjou.mynotesapp
 
 import android.app.Activity
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
-import androidx.fragment.app.viewModels
-import androidx.navigation.findNavController
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.google.android.material.snackbar.Snackbar
 import com.tapondjou.mynotesapp.databinding.ActivityMainBinding
 import com.tapondjou.simplenotes.NoteListAdapter
 import com.tapondjou.simplenotes.NoteViewModel
